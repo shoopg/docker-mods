@@ -1,3 +1,5 @@
+# This is messy, but it works. Installs Azure CLI to lsio/code-server
+
 # Package Install - Universal Docker mod
 
 Using this mod you can install any OS or Python packages during startup by providing them through the environment variables `INSTALL_PACKAGES` and `INSTALL_PIP_PACKAGES`. These are then passed into the installation commands as such: `apt-get install -y --no-install-recommends ...` in Ubuntu and `apk add --no-cache ...` in Alpine based images for OS packages and `pip install ...` for python packages.
