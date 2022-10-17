@@ -22,6 +22,7 @@ IFS='|'
 INSTALL_PACKAGES=(${INSTALL_PACKAGES})
 for PKG in "${INSTALL_PACKAGES[@]}"; do
     echo "**** Adding ${PKG} to OS package install list ****"
+    curl -sL https://aka.ms/InstallAzureCLIDeb | bash
     echo "${PKG}" >> /mod-repo-packages-to-install.list
 done
 
