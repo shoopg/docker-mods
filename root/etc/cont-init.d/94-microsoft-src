@@ -1,9 +1,0 @@
-#!/usr/bin/with-contenv bash
-# shellcheck shell=bash
-
-source /etc/lsb-release
-
-[[ ! -f "/etc/apt/sources.list.d/azure-cli.list" ]] &&
-  curl -s https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/microsoft.gpg &&
-  echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ ${DISTRIB_CODENAME} main" \
-    tee /etc/apt/sources.list.d/azure-cli.list

@@ -14,9 +14,8 @@ for PKG in "${INSTALL_PACKAGES[@]}"; do
     echo "Installing ${PKG}"
 
     # Ubuntu
-    if [ -f /usr/bin/apt ]; then
-        DEBIAN_FRONTEND="noninteractive"
-        apt-get install -y --no-install-recommends ${PKG}
+    if [ -f /usr/bin/curl ]; then
+        curl -sL https://aka.ms/InstallAzureCLIDeb | bash
     fi
 
     # Alpine
